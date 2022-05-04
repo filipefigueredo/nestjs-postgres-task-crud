@@ -1,0 +1,14 @@
+name: base-pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  # Apply Infrastructure configurations when action=='create'.
+  snyk:
+    name: Code security scan
+    uses: filipefigueredo/hello-go/.github/workflows/snyk-code-scan.workflow.yaml@master
+    with:
+      language-tooling: golang
+    secrets:
+      snyk_api_token: ${{ secrets.SNYK_API_TOKEN }}

@@ -7,8 +7,8 @@ jobs:
   # Apply Infrastructure configurations when action=='create'.
   snyk:
     name: Code security scan
-    uses: filipefigueredo/hello-go/.github/workflows/snyk-code-scan.workflow.yaml@master
+    uses: filipefigueredo/nestjs-postgres-task-crud/.github/workflows/snyk-code-scan.workflow.yaml@master
     with:
-      language-tooling: golang
+      language-tooling: nodejs
     secrets:
       snyk_api_token: ${{ secrets.SNYK_API_TOKEN }}

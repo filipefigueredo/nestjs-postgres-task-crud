@@ -60,6 +60,6 @@ jobs:
         if: ${{ inputs.language-tooling == 'nodejs'}}
         uses: snyk/actions/node@master
         env:
-          SNYK_TOKEN: ${{ secrets.snyk_token }}
+          SNYK_TOKEN: ${{ secrets.snyk_api_token }}
         with:
           command: monitor
